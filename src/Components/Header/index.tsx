@@ -3,6 +3,8 @@ import Image from "next/image";
 import logo from "../../../public/images/tekizon-logo.svg";
 import { ActiveLink } from "../ActiveLink";
 
+
+
 export function Header(){
     return(
         <header className={styles.headerContainer}>

@@ -10,15 +10,16 @@ import techsImage from "../../public/images/techs.svg";
 import { WhatsappButton } from "../Components/WhatsappButton";
 
 type Content ={
-  title: string;
-  titleContent: string;
-  linkAction: string;
-  mobileTitle: string;
-  mobileContent: string;
-  mobileBanner: string;
-  webTitle: string;
-  webContent: string;
-  webBanner: string;
+  titlePart1: string;
+  textPart1: string;
+  buttonPart1: string;
+  imagePart1: string;
+  titlePart2: string;
+  textPart2: string;
+  imagePart2: string;
+  titlePart3: string;
+  textPart3: string;
+  imagePart3: string;
   whatsappNumber: string;
 }
 
@@ -35,34 +36,34 @@ export default function Home({ content }: ContentProps) {
       <main className={styles.container}>
         <div className={styles.containerHeader}>
           <section className={styles.ctaText}>
-            <h1>{content.title}</h1>
-            <span>{content.titleContent}</span>
-            <a href={content.linkAction}>
+            <h1>{content.titlePart1}</h1>
+            <span>{content.textPart1}</span>
+            <a href={content.buttonPart1}>
               <button>
                 COMEÇAR AGORA!
               </button>
             </a>
           </section>
-          <img src="/images/banner-conteudos.png" alt="Conteúdos da sua empresa" />
+          <img src={content.imagePart1} alt="Conteúdos da sua empresa" />
         </div>
 
         <hr className={styles.divisor} />
 
         <div className={styles.sectionContent}> 
           <section>
-            <h2>{content.mobileTitle}</h2>
-            <span>{content.mobileContent}</span>
+            <h2>{content.titlePart2}</h2>
+            <span>{content.textPart2}</span>
           </section>
-          <img src={content.mobileBanner} alt="Conteúdos desenvolvimento de Apps" />
+          <img src={content.imagePart2} alt="Conteúdos desenvolvimento de Apps" />
         </div>
 
         <hr className={styles.divisor} />
 
         <div className={styles.sectionContent}> 
-          <img src={content.webBanner} alt="Conteúdos desenvolvimento de aplicações Web" />
+          <img src={content.imagePart3} alt="Conteúdos desenvolvimento de aplicações Web" />
           <section>
-            <h2 className={styles.secondImage}>{content.webTitle}</h2>
-            <span>{content.webContent}</span>
+            <h2 className={styles.secondImage}>{content.titlePart3}</h2>
+            <span>{content.textPart3}</span>
           </section>
         </div>
 
@@ -72,11 +73,11 @@ export default function Home({ content }: ContentProps) {
           <Image src={techsImage} alt="Tecnologias" />
           <h2><span className={styles.alunos}>Milhares</span> de empresas já elevaram seu negócio ao próximo nivel.</h2>
           <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
-          <a href={content.linkAction}>
+          <a>
             <button>COMEÇAR AGORA!</button>
           </a>
         </div>
-        <WhatsappButton link={content.whatsappNumber}/>
+        <WhatsappButton link={content.whatsappNumber} />
       </main>
     </>
   )
@@ -94,23 +95,24 @@ export const getStaticProps: GetStaticProps = async () => {
   ]);
   
   const {
-    title, sub_title, link_action,
-    mobile, mobile_content, mobile_banner,
-    title_web, web_content, web_banner
+    parte1_titulo, parte1_texto, parte1_botao, parte1_imagem,
+    parte2_titulo, parte2_texto, parte2_imagem,
+    parte3_titulo, parte3_texto, parte3_imagem,
   } = response.results[0].data;
 
   const { whatsapp_number } = responseTwo.results[0].data;
 
   const content = {
-    title: RichText.asText(title),
-    titleContent: RichText.asText(sub_title),
-    linkAction: link_action.url,
-    mobileTitle: RichText.asText(mobile),
-    mobileContent: RichText.asText(mobile_content),
-    mobileBanner: mobile_banner.url,
-    webTitle: RichText.asText(title_web),
-    webContent: RichText.asText(web_content),
-    webBanner: web_banner.url,
+    titlePart1: RichText.asText(parte1_titulo),
+    textPart1: RichText.asText(parte1_texto),
+    buttonPart1: parte1_botao.url,
+    imagePart1: parte1_imagem.url,
+    titlePart2: RichText.asText(parte2_titulo),
+    textPart2: RichText.asText(parte2_texto),
+    imagePart2: parte2_imagem.url,
+    titlePart3: RichText.asText(parte3_titulo),
+    textPart3: RichText.asText(parte3_texto),
+    imagePart3: parte3_imagem.url,
     whatsappNumber: RichText.asText(whatsapp_number),
   }
 
@@ -118,6 +120,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props:{
       content
     },
-    revalidate: 60 * 2
+    revalidate: 60 * 5
   }
 }
