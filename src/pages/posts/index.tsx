@@ -83,7 +83,7 @@ export default function Posts({posts: postsBlog, page, totalPage}: PostsProps){
                                 alt={post.title}
                                 width={720}
                                 height={410}
-                                quality={100}
+                                quality={95}
                                 placeholder="blur"
                                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOceAQAAewBV8186UYAAAAASUVORK5CYII="
                             />
