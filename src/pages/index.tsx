@@ -31,7 +31,7 @@ export default function Home({ content }: ContentProps) {
   return (
     <>
       <Head>
-        <title>Home | Meu Projeto</title> 
+        <title>Home | Tekizon</title> 
       </Head>
       <main className={styles.container}>
         <div className={styles.containerHeader}>

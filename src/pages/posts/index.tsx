@@ -70,7 +70,7 @@ export default function Posts({posts: postsBlog, page, totalPage}: PostsProps){
     return(
         <>
             <Head>
-                <title>Blog | Meu Projeto</title>
+                <title>Blog | Tekizon</title>
             </Head>
             <main className={styles.container}>
                 <div className={styles.posts}>
