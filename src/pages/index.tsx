@@ -32,6 +32,7 @@ export default function Home({ content }: ContentProps) {
     <>
       <Head>
         <title>Home | Tekizon</title> 
+        <meta property="og:url" content="https://tekizon.com.br/" />
       </Head>
       <main className={styles.container}>
         <div className={styles.containerHeader}>

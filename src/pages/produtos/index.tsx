@@ -67,12 +67,12 @@ export default function Products({products: produtos, page, totalPage, content}:
     return (
       <>
         <Head>
-          <title>Blog | Tekizon</title>
+          <title>Produtos | Tekizon</title>
+          <meta property="og:url" content="https://tekizon.com.br/produtos" />
         </Head>
         <main className={styles.container}>
           <div className={styles.products}>
             {products.map((product) => (
-              <div key={product.slug}>
                 <div className={styles.produto} key={product.slug}>
                   <div>
                     <Image
@@ -98,7 +98,6 @@ export default function Products({products: produtos, page, totalPage, content}:
                     </Link>
                   </div>
                 </div>
-              </div>
             ))}
           </div>
           <div className={styles.buttonNavigate}>

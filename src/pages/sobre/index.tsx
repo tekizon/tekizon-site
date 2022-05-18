@@ -26,6 +26,7 @@ export default function Sobre({ content }: ContentProps){
       <>
         <Head>
           <title>Quem somos | Tekizon</title>
+          <meta property="og:url" content="https://tekizon.com.br/sobre" />
         </Head>
         <main className={styles.container}>
           <div className={styles.containerHeader}>

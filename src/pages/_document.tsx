@@ -14,6 +14,7 @@ export default class MyDocument extends Document{
                     <meta property="og:image:width" content="1200"/>
                     <meta property="og:image:height" content="630"/>
                     <meta property="og:locale" content="pt_BR" />
+                    <meta property="og:type" content="website"/>
                 </Head>
                 <body>
                     <Main />

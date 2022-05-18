@@ -71,6 +71,7 @@ export default function Posts({posts: postsBlog, page, totalPage}: PostsProps){
         <>
             <Head>
                 <title>Blog | Tekizon</title>
+                <meta property="og:url" content="https://tekizon.com.br/posts" />
             </Head>
             <main className={styles.container}>
                 <div className={styles.posts}>
