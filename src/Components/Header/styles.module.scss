@@ -72,6 +72,7 @@
     .headerContent{
         display: flex;
         flex-direction: column;
+        padding: 0 1rem;
 
         nav{
             display: block;
@@ -82,6 +83,10 @@
             a{
                 height: 3rem;
                 line-height: 3rem;
+
+                & + a{
+                    margin-left: 1rem;
+                }
             }
         }
     }
