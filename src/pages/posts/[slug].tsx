@@ -11,6 +11,7 @@ interface PostProps{
         slug: string;
         title: string;
         description: string;
+        miniDescription: string;
         cover: string;
         updateAt: string;
     }
@@ -21,6 +22,11 @@ export default function Post({post}: PostProps){
         <>
             <Head>
                 <title>{post.title}</title>
+                <meta property="og:url" content={`https://tekizon.com.br/posts/${post.slug}`} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.miniDescription} />
+                <meta name="description" content={post.miniDescription} />
+
             </Head>
             <main className={styles.container}>
                 <article className={styles.post}>
@@ -63,6 +69,7 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
         slug: slug,
         title: RichText.asText(response.data.title),
         description: RichText.asHtml(response.data.description),
+        miniDescription: response.data.description.find(content => content.type === "paragraph")?.text ?? "" ,
         cover: response.data.cover.url,
         updateAt: new Date(response.last_publication_date).toLocaleDateString("pt-br", {
             day: "2-digit",
@@ -70,6 +77,8 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
             year: "numeric"
         })
     }
+
+    
 
     return{
         props:{

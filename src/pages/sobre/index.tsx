@@ -27,6 +27,9 @@ export default function Sobre({ content }: ContentProps){
         <Head>
           <title>Quem somos | Tekizon</title>
           <meta property="og:url" content="https://tekizon.com.br/sobre" />
+          <meta property="og:title" content="Página Sobre da Tekizon" />
+          <meta property="og:description" content="Exemplo de site da Tekizon Sites Personalizáveis. O que acha de fazer seu site com a gente? Nossos sites contam com sistema de fácil gerenciamento, além de poder ser personalizado por você mesmo a qualquer momento." />
+          <meta name="description" content="Este é um exemplo de site da Tekizon Sites Personalizáveis. O que acha de fazer seu site com a gente? Nossos sites contam com sistema de fácil gerenciamento, além de poder ser personalizado por você mesmo a qualquer momento. Outro benefício é que você só paga uma vez." />
         </Head>
         <main className={styles.container}>
           <div className={styles.containerHeader}>

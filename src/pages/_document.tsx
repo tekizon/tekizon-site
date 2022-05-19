@@ -15,6 +15,7 @@ export default class MyDocument extends Document{
                     <meta property="og:image:height" content="630"/>
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:type" content="website"/>
+                    <meta name="keywords" content="Sites Personalizados, Website, Criação de Site, Criação de Website, Criação de Landing Page"></meta>
                 </Head>
                 <body>
                     <Main />
