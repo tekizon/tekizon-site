@@ -20,6 +20,12 @@ type Content ={
   titlePart3: string;
   textPart3: string;
   imagePart3: string;
+  image1Part4: string;
+  text1Part4: string;
+  image2Part4: string;
+  text2Part4: string;
+  image3Part4: string;
+  text3Part4: string;
   whatsappNumber: string;
 }
 
@@ -73,6 +79,38 @@ export default function Home({ content }: ContentProps) {
 
         <hr className={styles.divisor} />
 
+        <div className={styles.benefits}>
+          <div className={styles.benefit}>
+            <Image
+              src={content.imagePart1}
+              alt={content.titlePart1}
+              width={300}
+              height={300}
+            />
+            <p>{content.titlePart1}</p>
+          </div>
+          <div className={styles.benefit}>
+            <Image 
+              src={content.imagePart2} 
+              alt={content.titlePart2}
+              width={300}
+              height={300}  
+            />
+            <p>{content.titlePart2}</p>
+          </div>
+          <div className={styles.benefit}>
+            <Image 
+              src={content.imagePart3} 
+              alt={content.titlePart3} 
+              width={300}
+              height={300}
+            />
+            <p>{content.titlePart3}</p>
+          </div>
+        </div>
+
+      <hr className={styles.divisor} />
+
         <div className={styles.nextLevelContent}>
           <Image src={techsImage} alt="Tecnologias" />
           <h2><span className={styles.alunos}>Milhares</span> de empresas já elevaram seu negócio ao próximo nivel.</h2>
@@ -102,6 +140,9 @@ export const getStaticProps: GetStaticProps = async () => {
     parte1_titulo, parte1_texto, parte1_botao, parte1_imagem,
     parte2_titulo, parte2_texto, parte2_imagem,
     parte3_titulo, parte3_texto, parte3_imagem,
+    parte4_imagem1, parte4_texto1, 
+    parte4_imagem2, parte4_texto2,
+    parte4_imagem3, parte4_texto3,
   } = response.results[0].data;
 
   const { whatsapp_number } = responseTwo.results[0].data;
@@ -117,6 +158,12 @@ export const getStaticProps: GetStaticProps = async () => {
     titlePart3: RichText.asText(parte3_titulo),
     textPart3: RichText.asText(parte3_texto),
     imagePart3: parte3_imagem.url,
+    // image1Part4: parte4_imagem1.url,
+    // text1Part4: RichText.asText(parte4_texto1),
+    // image2Part4: parte4_imagem2.url,
+    // text2Part4: RichText.asText(parte4_texto2),
+    // image3Part4: parte4_imagem3.url,
+    // text3Part4: RichText.asText(parte4_texto3),
     whatsappNumber: RichText.asText(whatsapp_number),
   }
 
