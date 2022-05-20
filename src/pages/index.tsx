@@ -84,8 +84,8 @@ export default function Home({ content }: ContentProps) {
             <Image
               src={content.image1Part4}
               alt={content.text1Part4}
-              width={300}
-              height={300}
+              width={110}
+              height={110}
             />
             <p>{content.text1Part4}</p>
           </div>
@@ -93,8 +93,8 @@ export default function Home({ content }: ContentProps) {
             <Image 
               src={content.image2Part4} 
               alt={content.text2Part4}
-              width={300}
-              height={300}  
+              width={110}
+              height={110}  
             />
             <p>{content.text2Part4}</p>
           </div>
@@ -102,8 +102,8 @@ export default function Home({ content }: ContentProps) {
             <Image 
               src={content.image3Part4} 
               alt={content.text3Part4} 
-              width={300}
-              height={300}
+              width={110}
+              height={110}
             />
             <p>{content.text3Part4}</p>
           </div>
