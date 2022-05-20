@@ -115,7 +115,7 @@ export default function Home({ content }: ContentProps) {
           <Image src={techsImage} alt="Tecnologias" />
           <h2><span className={styles.alunos}>Milhares</span> de empresas já elevaram seu negócio ao próximo nivel.</h2>
           <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
-          <a href={content.whatsappNumber}>
+          <a href={content.buttonPart1}>
             <button>COMEÇAR AGORA!</button>
           </a>
         </div>
