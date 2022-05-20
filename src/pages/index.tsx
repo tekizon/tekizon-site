@@ -82,30 +82,30 @@ export default function Home({ content }: ContentProps) {
         <div className={styles.benefits}>
           <div className={styles.benefit}>
             <Image
-              src={content.imagePart1}
-              alt={content.titlePart1}
+              src={content.image1Part4}
+              alt={content.text1Part4}
               width={300}
               height={300}
             />
-            <p>{content.titlePart1}</p>
+            <p>{content.text1Part4}</p>
           </div>
           <div className={styles.benefit}>
             <Image 
-              src={content.imagePart2} 
-              alt={content.titlePart2}
+              src={content.image2Part4} 
+              alt={content.text2Part4}
               width={300}
               height={300}  
             />
-            <p>{content.titlePart2}</p>
+            <p>{content.text2Part4}</p>
           </div>
           <div className={styles.benefit}>
             <Image 
-              src={content.imagePart3} 
-              alt={content.titlePart3} 
+              src={content.image3Part4} 
+              alt={content.text3Part4} 
               width={300}
               height={300}
             />
-            <p>{content.titlePart3}</p>
+            <p>{content.text3Part4}</p>
           </div>
         </div>
 
@@ -158,12 +158,12 @@ export const getStaticProps: GetStaticProps = async () => {
     titlePart3: RichText.asText(parte3_titulo),
     textPart3: RichText.asText(parte3_texto),
     imagePart3: parte3_imagem.url,
-    // image1Part4: parte4_imagem1.url,
-    // text1Part4: RichText.asText(parte4_texto1),
-    // image2Part4: parte4_imagem2.url,
-    // text2Part4: RichText.asText(parte4_texto2),
-    // image3Part4: parte4_imagem3.url,
-    // text3Part4: RichText.asText(parte4_texto3),
+    image1Part4: parte4_imagem1.url,
+    text1Part4: RichText.asText(parte4_texto1),
+    image2Part4: parte4_imagem2.url,
+    text2Part4: RichText.asText(parte4_texto2),
+    image3Part4: parte4_imagem3.url,
+    text3Part4: RichText.asText(parte4_texto3),
     whatsappNumber: RichText.asText(whatsapp_number),
   }
 

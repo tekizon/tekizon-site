@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await prismic.query([
       Prismic.Predicates.at('document.type', 'about')
     ]);
-  
+
     const {
       title,
       description,
@@ -85,7 +85,7 @@ export const getStaticProps: GetStaticProps = async () => {
       instagram: instagram.url,
       youtube: youtube.url,
       linkedin: linkedin.url,
-    };
+    };    
   
     return{
       props:{
