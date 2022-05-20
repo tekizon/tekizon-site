@@ -20,6 +20,8 @@
 
 .ctaText{
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
 
     h1{
         font-size: 3.5rem;
@@ -151,6 +153,11 @@
         border-radius: 7px;
         color: var(--white);
         font-weight: bold;
+        transition: transform 0.4s;
+
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -252,5 +259,11 @@
                 width: 100%;
             }
         }
+    }
+}
+@media (max-width: 779px){
+    .benefits{
+        grid-template-columns: max-content;
+        place-content: center;
     }
 }

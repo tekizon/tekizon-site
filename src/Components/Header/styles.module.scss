@@ -76,8 +76,7 @@
 
         nav{
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             height: 3rem;
 
             a{
@@ -93,5 +92,21 @@
 
     .readyButton{
         display: none;
+    }
+}
+
+@media (max-width: 308px){
+    .headerContent{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5rem;
+
+        nav{
+            a{
+                & + a{
+                    margin-left: 0.4rem;
+                }
+            }
+        }
     }
 }
