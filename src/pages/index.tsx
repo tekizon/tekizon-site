@@ -8,6 +8,7 @@ import { RichText } from "prismic-dom";
 import Image from "next/image";
 import techsImage from "../../public/images/techs.svg";
 import { WhatsappButton } from "../Components/WhatsappButton";
+import { Footer } from "../Components/Footer";
 
 type Content ={
   titlePart1: string;
@@ -50,7 +51,7 @@ export default function Home({ content }: ContentProps) {
             <span>{content.textPart1}</span>
             <a href={content.buttonPart1}>
               <button>
-                COMEÇAR AGORA!
+                QUERO EVOLUIR!
               </button>
             </a>
           </section>
@@ -116,11 +117,12 @@ export default function Home({ content }: ContentProps) {
           <h2><span className={styles.alunos}>Milhares</span> de empresas já elevaram seu negócio ao próximo nivel.</h2>
           <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
           <a href={content.buttonPart1}>
-            <button>COMEÇAR AGORA!</button>
+            <button>QUERO EVOLUIR!</button>
           </a>
         </div>
         <WhatsappButton link={content.whatsappNumber} />
       </main>
+      <Footer />
     </>
   )
 }

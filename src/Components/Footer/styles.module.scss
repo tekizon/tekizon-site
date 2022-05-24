@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 1rem 0 2rem;
+
+    a{
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 420px) {
+    .container{
+        margin-left: -0.2rem;
+        font-size: 0.7rem;
+    }
+}
