@@ -206,6 +206,10 @@
             justify-content: center;
             min-height: calc(100vh - 11rem);
 
+            a{
+                width: 100%;
+            }
+
             button{
                 width: 100%;
                 display: flex;
