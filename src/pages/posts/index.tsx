@@ -9,6 +9,7 @@ import { getPrismicClient } from "../../services/prismic";
 import Prismic from "@prismicio/client";
 import { RichText } from "prismic-dom";
 import { useState } from "react";
+import { Footer } from "../../Components/Footer";
 
 type Post = {
     slug: string;
@@ -122,6 +123,7 @@ export default function Posts({posts: postsBlog, page, totalPage}: PostsProps){
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }

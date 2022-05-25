@@ -4,6 +4,7 @@ import { getPrismicClient } from "../../services/prismic";
 import { RichText } from "prismic-dom";
 import Head from "next/head";
 import Image from "next/image";
+import { Footer } from "../../Components/Footer";
  
 
 interface PostProps{
@@ -46,6 +47,7 @@ export default function Post({post}: PostProps){
                     </div>
                 </article>
             </main>
+            <Footer />
         </>
     )
 }

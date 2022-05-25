@@ -10,6 +10,7 @@ import Prismic from "@prismicio/client";
 import { RichText } from "prismic-dom";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { Footer } from "../../Components/Footer";
 
 type Product = {
     slug: string;
@@ -126,6 +127,7 @@ export default function Products({products: produtos, page, totalPage, content}:
             )}
           </div>
         </main>
+        <Footer />
       </>
     );
 }

@@ -5,6 +5,7 @@ import { getPrismicClient } from "../../services/prismic";
 import { RichText } from "prismic-dom";
 import Prismic from "@prismicio/client";
 import { FaYoutube, FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa';
+import { Footer } from "../../Components/Footer";
 
 type Content = {
   title: string;
@@ -52,10 +53,24 @@ export default function Sobre({ content }: ContentProps){
                 <FaLinkedin size={40} />
               </a>
             </section>
+            
 
             <img src={content.banner} alt="Sobre Sujeito Programador" />
           </div>
+          <hr className={styles.divisor} />
+          <section className={styles.founders}>
+              <h2>Fundadores</h2>
+              <h3><span className={styles.dash}></span>João<span className={styles.dash}></span></h3>
+              <p>&rdquo;Olá, tudo bem? Me chamo João e sou especialista em desenvolvimento front-end, além de ter um amplo conhecimento em investimentos e empreendedorismo.&rdquo;</p>
+              <hr />
+              <h3><span className={styles.dash}></span>Vitor<span className={styles.dash}></span></h3>
+              <p>&rdquo;Eai, tudo bem? Me chamo Vitor e sou especialista em Web Design, além de ter conhecimento em investimento e formado em TI.&rdquo;</p>
+              <hr />
+              <h3><span className={styles.dash}></span>Well<span className={styles.dash}></span></h3>
+              <p>&rdquo;Daí, tudo bem? Me chamo Wellington e sou especialista em vendas e gerenciamento de empresa, além de ser formado em TI e ter conhecimento em investimento e em programação back-end.&rdquo;</p>
+            </section>
         </main>
+        <Footer />
       </>
     );
 }
