@@ -61,10 +61,10 @@ export default function Sobre({ content }: ContentProps){
           <section className={styles.founders}>
               <h2>Fundadores</h2>
               <h3><span className={styles.dash}></span>João<span className={styles.dash}></span></h3>
-              <p>&rdquo;Opa, tudo bom? Me chamo João e sou especialista em desenvolvimento front-end, além de ter um amplo conhecimento em investimentos e empreendedorismo.&rdquo;</p>
+              <p>&rdquo;Opa, tudo bom? Meu nome é João e sou Desenvolvedor Web com foco em Desenvolvimento Front-End, além de ser apaixonado e ter um amplo conhecimento em marketing e empreendedorismo.&rdquo;</p>
               <hr />
               <h3><span className={styles.dash}></span>Vitor<span className={styles.dash}></span></h3>
-              <p>&rdquo;Eai, tudo bem? Me chamo Vitor e sou especialista em Web Design, além de ter conhecimento em investimento e formado em TI.&rdquo;</p>
+              <p>&rdquo;Eai, tudo bem? Sou o Vitor e sou fascinado em Web Design, com anos de experiência no mercado trabalhando em agências renomadas. Busco sempre conhecimento para me atualizar de todas as novas tendências e nunca ficar para trás. Tendo como formação técnica em Informática sou entusiasta da tecnologia e do marketing digital.&rdquo;</p>
               <hr />
               <h3><span className={styles.dash}></span>Wellington<span className={styles.dash}></span></h3>
               <p>&rdquo;Daí, tudo bem? Me chamo Wellington e sou especialista em vendas e gerenciamento de empresa, além de ser formado em TI e ter conhecimento em investimento e em programação back-end.&rdquo;</p>
