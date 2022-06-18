@@ -5,6 +5,7 @@ import { RichText } from "prismic-dom";
 import Head from "next/head";
 import Image from "next/image";
 import { Footer } from "../../Components/Footer";
+import DOMpurify from "dompurify";
  
 
 interface PostProps{
@@ -42,7 +43,7 @@ export default function Post({post}: PostProps){
                     />
                     <h1>{post.title}</h1>
                     <time>{post.updateAt}</time>
-                    <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: post.description }}>
+                    <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: DOMpurify.sanitize(post.description)  }}>
                         
                     </div>
                 </article>
