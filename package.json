@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prismicio/client": "^5.1.0",
+    "@types/dompurify": "^2.3.3",
     "dompurify": "^2.3.8",
     "next": "12.1.6",
     "prismic-dom": "^2.2.7",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.33",
+    "@types/prismic-dom": "^2.1.1",
     "@types/react": "^18.0.9",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
