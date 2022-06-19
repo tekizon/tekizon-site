@@ -43,7 +43,7 @@ export default function Post({post}: PostProps){
                     />
                     <h1>{post.title}</h1>
                     <time>{post.updateAt}</time>
-                    <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.description)  }}>
+                    <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.description) }}>
                         
                     </div>
                 </article>
